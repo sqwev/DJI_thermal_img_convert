@@ -1,0 +1,26 @@
+var structdirp__api__wrapper__t =
+[
+    [ "create_from_rjpeg", "structdirp__api__wrapper__t.html#a6005edd791dc2372f001ccd057b9110e", null ],
+    [ "destroy", "structdirp__api__wrapper__t.html#a5b10ce8fe656a4fe7568a9463d6fb00d", null ],
+    [ "get_color_bar", "structdirp__api__wrapper__t.html#aa166cf6cb11ff938d474010d984b83d4", null ],
+    [ "get_color_bar_adaptive_params", "structdirp__api__wrapper__t.html#afdf976e28b5777b1b49bfb70eb3928b4", null ],
+    [ "get_enhancement_params", "structdirp__api__wrapper__t.html#ac9407cc4628a6871c4edc8805e96d286", null ],
+    [ "get_isotherm", "structdirp__api__wrapper__t.html#a0ce7391be635748246ba55643c7010a6", null ],
+    [ "get_measurement_params", "structdirp__api__wrapper__t.html#a3c0facc1d285a940e8881904c9fc43d9", null ],
+    [ "get_measurement_params_range", "structdirp__api__wrapper__t.html#a507c6e41e62fd80fa7f8a6acd9e2d256", null ],
+    [ "get_original_raw", "structdirp__api__wrapper__t.html#a0a011013fdae62b4bf5c91d497c1f847", null ],
+    [ "get_pseudo_color", "structdirp__api__wrapper__t.html#a84b39cfcff773fca34c5a81173344ef9", null ],
+    [ "get_pseudo_color_lut", "structdirp__api__wrapper__t.html#a7076701aed2b7cbf9aedad79f747bc22", null ],
+    [ "get_rjpeg_resolution", "structdirp__api__wrapper__t.html#a80c5309b85371a642a9d790a67819f0f", null ],
+    [ "get_rjpeg_version", "structdirp__api__wrapper__t.html#abbb9a09d9c1a642cd7d615c68eb1743a", null ],
+    [ "measure", "structdirp__api__wrapper__t.html#a2edb58bd8af697e677dc4508fb8bbecd", null ],
+    [ "measure_ex", "structdirp__api__wrapper__t.html#a33b403172a7b2b7ee66758e4352a6ed8", null ],
+    [ "process", "structdirp__api__wrapper__t.html#ac8cd082f8e6a78cbd87a2da317a41c81", null ],
+    [ "process_strech", "structdirp__api__wrapper__t.html#a4600b3a1145cba126c3220a676eb4793", null ],
+    [ "set_color_bar", "structdirp__api__wrapper__t.html#ab68ad79a113da5998fd099f49c85697d", null ],
+    [ "set_enhancement_params", "structdirp__api__wrapper__t.html#a77544bba5e71436930950b91942c79ae", null ],
+    [ "set_isotherm", "structdirp__api__wrapper__t.html#a4fcc94b825ef43ddbcd57f3c26ad2426", null ],
+    [ "set_measurement_params", "structdirp__api__wrapper__t.html#abce31b1e126e53cb9821868c34fe31bd", null ],
+    [ "set_pseudo_color", "structdirp__api__wrapper__t.html#af1042caddabd0c9f4310ddcc1de16fb6", null ],
+    [ "set_verbose_level", "structdirp__api__wrapper__t.html#a240224033575055d5fd7f32fad98f14d", null ]
+];

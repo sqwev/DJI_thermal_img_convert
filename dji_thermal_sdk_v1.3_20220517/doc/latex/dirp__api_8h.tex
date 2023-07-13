@@ -1,0 +1,872 @@
+\hypertarget{dirp__api_8h}{}\doxysection{E\+:/\+Jenkins/camsw/workspace/farm\+\_\+prj/farm\+\_\+gd610\+\_\+tsdk\+\_\+commit\+\_\+pipeline/build\+\_\+windows/\+Include/dirp\+\_\+api.h File Reference}
+\label{dirp__api_8h}\index{E:/Jenkins/camsw/workspace/farm\_prj/farm\_gd610\_tsdk\_commit\_pipeline/build\_windows/Include/dirp\_api.h@{E:/Jenkins/camsw/workspace/farm\_prj/farm\_gd610\_tsdk\_commit\_pipeline/build\_windows/Include/dirp\_api.h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdirp__api__version__t}{dirp\+\_\+api\+\_\+version\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A\+PI version structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__rjpeg__version__t}{dirp\+\_\+rjpeg\+\_\+version\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R-\/\+J\+P\+EG version structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__resolution__t}{dirp\+\_\+resolution\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The image size structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__isotherm__t}{dirp\+\_\+isotherm\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Isotherm parameters structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Color bar parameters structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__isp__pseudo__color__lut__t}{dirp\+\_\+isp\+\_\+pseudo\+\_\+color\+\_\+lut\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Pseudo color L\+UT array structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__enhancement__params__t}{dirp\+\_\+enhancement\+\_\+params\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image enhancement parameteres structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__measurement__params__t}{dirp\+\_\+measurement\+\_\+params\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Customize temperature measurement parameteres structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdirp__measurement__params__range__t}{dirp\+\_\+measurement\+\_\+params\+\_\+range\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Range of temperature measurement parameteres structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dirp__api_8h_a4b39b8f4af8007bb598f21522223c0a8}{\+\_\+\+D\+I\+R\+P\+\_\+\+A\+P\+I\+\_\+\+H\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+ ((visibility(\char`\"{}default\char`\"{})))
+\item 
+\#define \mbox{\hyperlink{dirp__api_8h_a98e0e666b4aa6dfd807432057cfc12fb}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+U\+T\+\_\+\+D\+E\+P\+TH}}~(256)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}
+\begin{DoxyCompactList}\small\item\em Structure representing a handle on a D\+I\+RP instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} \{ \newline
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa41840f86a9477c411acbbc7b68edb000}{D\+I\+R\+P\+\_\+\+S\+U\+C\+C\+E\+SS}} = 0, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa2527a400493ea374221a087d645b380f}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+L\+L\+OC}} = -\/1, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa9135d537cd0681209a5b083da885d5e0}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL}} = -\/2, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaff51075301e337ec3223a47e8647572f}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+MS}} = -\/3, 
+\newline
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aae83eda91339b61292f0289ad2786aa40}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+AW}} = -\/4, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaafa04914a458bf8bc2fc612d0f8ec3e0}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+E\+A\+D\+ER}} = -\/5, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa0392a496b731fc6574c65cc2b2d9cf8b}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+U\+R\+VE}} = -\/6, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaa7ce2eaea439431890d261279f1f7e89}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+J\+P\+E\+G\+\_\+\+P\+A\+R\+SE}} = -\/7, 
+\newline
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa81313464776ddaf37bcbcf4d3e92c440}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+I\+ZE}} = -\/8, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa6a72bc360cb20b688376e8d858d7bca3}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+LE}} = -\/9, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaba152d8d79e164b65368864d10073882}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+P\+UT}} = -\/10, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa266c5832900988bf7516de1c4fc39087}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+O\+U\+T\+P\+UT}} = -\/11, 
+\newline
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aad3807e5f7d316ea427e40f6d4f25906d}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+F\+U\+NC}} = -\/12, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aae2c0bba9220d120049c310c547610e98}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY}} = -\/13, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aada8b5f7fda6681c04e182005aeca9725}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+ON}} = -\/14, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa7219925ac11e9ee5011a8fd16f9e6358}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+NI}} = -\/15, 
+\newline
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa6590a3baefcf71375e51f77c6197c2e0}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+U\+B\+\_\+\+D\+LL}} = -\/16, 
+\mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14aab708ec08feba1e1d0b7f7eb52e1ca902}{D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+A\+N\+C\+ED}} = -\/32
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}} \{ \newline
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a1a58a74c773c78de7f6c875f24df5e3c}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E\+H\+OT}} = 0, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a52bf3f2c177fdd59633a2e9d106e0c06}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+U\+L\+G\+U\+R\+I\+TE}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322abd45673880be6c5c5f365d5ba2494899}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+I\+R\+O\+N\+R\+ED}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a59d4f7abc294f3a89f21a4691ca44593}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+O\+T\+I\+R\+ON}}, 
+\newline
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4febaa644f7f54c159af0aad7f10d7e8}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+E\+D\+I\+C\+AL}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4fcb315b16455a5ae3bd8f8f97caff49}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+A\+R\+C\+T\+IC}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a08abad07f98b8d5933f929d9e3ba0968}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+A\+I\+N\+B\+O\+W1}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a86f0e038abb3542bb86e46e1ed8d5362}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+A\+I\+N\+B\+O\+W2}}, 
+\newline
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a62b7ea2b67abc1761236ae19da30d808}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+I\+NT}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4415e604bb0431b3049b84edf7cf8a6b}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K\+H\+OT}}, 
+\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322ae40e56d0b4a8cd10dfff389763f3b260}{D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM}}
+ \}
+\begin{DoxyCompactList}\small\item\em Palette types. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}{dirp\+\_\+verbose\+\_\+level\+\_\+e}} \{ \mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a1b96f4563b79a5d32688679683404216}{D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a61bbacd4be44ab03f1df241fb6b8719e}{D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+B\+UG}}, 
+\mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5af42369247b48dfbc7d2f0c0b6e049cba}{D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+T\+A\+IL}}, 
+\mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a2b0674069827dee8da8bab9aed554bfa}{D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+UM}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a5b34c77977d46500c86277c9ea5580e2}{dirp\+\_\+create\+\_\+from\+\_\+rjpeg}} (const uint8\+\_\+t $\ast$data, int32\+\_\+t size, \mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} $\ast$ph)
+\begin{DoxyCompactList}\small\item\em Create a new D\+I\+RP handle with specified R-\/\+J\+P\+EG binary data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a167cf7e92092b816cad74c1d95b2e304}{dirp\+\_\+destroy}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h)
+\begin{DoxyCompactList}\small\item\em Destroy the D\+I\+RP handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_adf77f6db20b236d5e5887810f295f174}{dirp\+\_\+get\+\_\+api\+\_\+version}} (\mbox{\hyperlink{structdirp__api__version__t}{dirp\+\_\+api\+\_\+version\+\_\+t}} $\ast$version)
+\begin{DoxyCompactList}\small\item\em Get A\+PI version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a39953da000361200c789b7b782251c94}{dirp\+\_\+get\+\_\+rjpeg\+\_\+version}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__rjpeg__version__t}{dirp\+\_\+rjpeg\+\_\+version\+\_\+t}} $\ast$version)
+\begin{DoxyCompactList}\small\item\em Get R-\/\+J\+P\+EG version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a39f7ee19b18a361f41271a6e1aa678ad}{dirp\+\_\+get\+\_\+rjpeg\+\_\+resolution}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__resolution__t}{dirp\+\_\+resolution\+\_\+t}} $\ast$resolution)
+\begin{DoxyCompactList}\small\item\em Get R-\/\+J\+P\+EG image resolution information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a93c10dbad6a0b3aae23e0269b7fa380f}{dirp\+\_\+get\+\_\+original\+\_\+raw}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, uint16\+\_\+t $\ast$raw\+\_\+image, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Get original R\+AW binary data from R-\/\+J\+P\+EG. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a5df7901ff313e239f11d7e51a123ffd0}{dirp\+\_\+process}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, uint8\+\_\+t $\ast$color\+\_\+image, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Run I\+SP algorithm with R\+AW data in R-\/\+J\+P\+EG and output R\+GB pseudo color image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_ac7f8b509432110184af98f3cb09da9ce}{dirp\+\_\+process\+\_\+strech}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, float $\ast$strech\+\_\+image, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Run I\+SP strech algorithm with R\+AW data in R-\/\+J\+P\+EG and output F\+L\+O\+A\+T32 streching image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_ac0bd3bcac73d4856ba8ccd4c5edd9ece}{dirp\+\_\+measure}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, int16\+\_\+t $\ast$temp\+\_\+image, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Measure temperature of whole thermal image with R\+AW data in R-\/\+J\+P\+EG. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a39492e01c35153c587bcfbf1b49d7364}{dirp\+\_\+measure\+\_\+ex}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, float $\ast$temp\+\_\+image, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Measure temperature of whole thermal image with R\+AW data in R-\/\+J\+P\+EG. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a029b25e80c8ee9342637f7c5a96cce86}{dirp\+\_\+set\+\_\+isotherm}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, const \mbox{\hyperlink{structdirp__isotherm__t}{dirp\+\_\+isotherm\+\_\+t}} $\ast$isotherm)
+\begin{DoxyCompactList}\small\item\em Set custom I\+SP isotherm parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a1194bbb29f474c5650d5d265147d046b}{dirp\+\_\+get\+\_\+isotherm}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__isotherm__t}{dirp\+\_\+isotherm\+\_\+t}} $\ast$isotherm)
+\begin{DoxyCompactList}\small\item\em Get orignial/custom I\+SP isotherm parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_af15b7fd6252b7bd81c712086cf50b870}{dirp\+\_\+set\+\_\+color\+\_\+bar}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, const \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} $\ast$color\+\_\+bar)
+\begin{DoxyCompactList}\small\item\em Set custom I\+SP color bar parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a87526fe677db8b852ee86f34ee11d861}{dirp\+\_\+get\+\_\+color\+\_\+bar}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} $\ast$color\+\_\+bar)
+\begin{DoxyCompactList}\small\item\em Get orignial/custom I\+SP color bar parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a10dcf36caab3af8ac9fc5cfce7fd42cb}{dirp\+\_\+get\+\_\+color\+\_\+bar\+\_\+adaptive\+\_\+params}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} $\ast$color\+\_\+bar)
+\begin{DoxyCompactList}\small\item\em Get adaptive I\+SP color bar parameters in automatic mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a2eac2f12e5c766e5c12f34e9bec17a81}{dirp\+\_\+set\+\_\+pseudo\+\_\+color}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}} pseudo\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Set custom I\+SP pseudo color type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_adb868414d4e7df904b59834688409834}{dirp\+\_\+get\+\_\+pseudo\+\_\+color}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}} $\ast$pseudo\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Get orignial/custom I\+SP pseudo color type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a4d627fe7a4df99bcf85124f3f72a0179}{dirp\+\_\+get\+\_\+pseudo\+\_\+color\+\_\+lut}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__isp__pseudo__color__lut__t}{dirp\+\_\+isp\+\_\+pseudo\+\_\+color\+\_\+lut\+\_\+t}} $\ast$pseudo\+\_\+lut)
+\begin{DoxyCompactList}\small\item\em Get I\+SP pseudo color L\+UT. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_ad3e247ff81a3732c64f194bf2fe7338b}{dirp\+\_\+set\+\_\+enhancement\+\_\+params}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, const \mbox{\hyperlink{structdirp__enhancement__params__t}{dirp\+\_\+enhancement\+\_\+params\+\_\+t}} $\ast$enhancement\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Set custom I\+SP enhancement parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a877486e77a5c6ff2caa75a7cb5cff28e}{dirp\+\_\+get\+\_\+enhancement\+\_\+params}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__enhancement__params__t}{dirp\+\_\+enhancement\+\_\+params\+\_\+t}} $\ast$enhancement\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Get orignial/custom I\+SP enhancement parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a919d42cac93299023dfcf8e63e15ce52}{dirp\+\_\+set\+\_\+measurement\+\_\+params}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, const \mbox{\hyperlink{structdirp__measurement__params__t}{dirp\+\_\+measurement\+\_\+params\+\_\+t}} $\ast$measurement\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Set custom temperature measurement parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_ad31b0b70de3fda2c57d42d323a3cb225}{dirp\+\_\+get\+\_\+measurement\+\_\+params}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__measurement__params__t}{dirp\+\_\+measurement\+\_\+params\+\_\+t}} $\ast$measurement\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Get orignial/custom temperature measurement parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t \mbox{\hyperlink{dirp__api_8h_a62262b2b68e06d8e71e28df30508734b}{dirp\+\_\+get\+\_\+measurement\+\_\+params\+\_\+range}} (\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} h, \mbox{\hyperlink{structdirp__measurement__params__range__t}{dirp\+\_\+measurement\+\_\+params\+\_\+range\+\_\+t}} $\ast$params\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Get range of temperature measurement parameters that user can set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} void \mbox{\hyperlink{dirp__api_8h_a21baa00d0336467d6fce62ae0d583194}{dirp\+\_\+set\+\_\+verbose\+\_\+level}} (\mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}{dirp\+\_\+verbose\+\_\+level\+\_\+e}} level)
+\begin{DoxyCompactList}\small\item\em Set log print level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} void \mbox{\hyperlink{dirp__api_8h_a41d6e2253ea7649069a0d0dc96e530b8}{dirp\+\_\+set\+\_\+logger\+\_\+file}} (const char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set external logger file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dirp__api_8h_a4b39b8f4af8007bb598f21522223c0a8}\label{dirp__api_8h_a4b39b8f4af8007bb598f21522223c0a8}} 
+\index{dirp\_api.h@{dirp\_api.h}!\_DIRP\_API\_H\_@{\_DIRP\_API\_H\_}}
+\index{\_DIRP\_API\_H\_@{\_DIRP\_API\_H\_}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{\_DIRP\_API\_H\_}{\_DIRP\_API\_H\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+I\+R\+P\+\_\+\+A\+P\+I\+\_\+\+H\+\_\+}
+
+\mbox{\Hypertarget{dirp__api_8h_a98e0e666b4aa6dfd807432057cfc12fb}\label{dirp__api_8h_a98e0e666b4aa6dfd807432057cfc12fb}} 
+\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_LUT\_DEPTH@{DIRP\_PSEUDO\_COLOR\_LUT\_DEPTH}}
+\index{DIRP\_PSEUDO\_COLOR\_LUT\_DEPTH@{DIRP\_PSEUDO\_COLOR\_LUT\_DEPTH}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{DIRP\_PSEUDO\_COLOR\_LUT\_DEPTH}{DIRP\_PSEUDO\_COLOR\_LUT\_DEPTH}}
+{\footnotesize\ttfamily \#define D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+L\+U\+T\+\_\+\+D\+E\+P\+TH~(256)}
+
+\mbox{\Hypertarget{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}\label{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}} 
+\index{dirp\_api.h@{dirp\_api.h}!dllexport@{dllexport}}
+\index{dllexport@{dllexport}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dllexport}{dllexport}}
+{\footnotesize\ttfamily \#define dllexport~\+\_\+\+\_\+attribute\+\_\+\+\_\+ ((visibility(\char`\"{}default\char`\"{})))}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}\label{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}} 
+\index{dirp\_api.h@{dirp\_api.h}!DIRP\_HANDLE@{DIRP\_HANDLE}}
+\index{DIRP\_HANDLE@{DIRP\_HANDLE}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{DIRP\_HANDLE}{DIRP\_HANDLE}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}
+
+
+
+Structure representing a handle on a D\+I\+RP instance. 
+
+It is usually originating from \mbox{\hyperlink{dirp__api_8h_a5b34c77977d46500c86277c9ea5580e2}{dirp\+\_\+create\+\_\+from\+\_\+rjpeg}} function. A D\+I\+RP handle is used to perform image processing and temperature measurement operations. When finished a D\+I\+RP processing, you should call \mbox{\hyperlink{dirp__api_8h_a167cf7e92092b816cad74c1d95b2e304}{dirp\+\_\+destroy}} function. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_pseudo\_color\_e@{dirp\_pseudo\_color\_e}}
+\index{dirp\_pseudo\_color\_e@{dirp\_pseudo\_color\_e}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_pseudo\_color\_e}{dirp\_pseudo\_color\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}}}
+
+
+
+Palette types. 
+
+There are variety of palette options. Distinct colors are used to show temperature differences in the thermal image, which are related to grayscale intensity. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_WHITEHOT@{DIRP\_PSEUDO\_COLOR\_WHITEHOT}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_WHITEHOT@{DIRP\_PSEUDO\_COLOR\_WHITEHOT}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a1a58a74c773c78de7f6c875f24df5e3c}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a1a58a74c773c78de7f6c875f24df5e3c}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E\+H\+OT&0\+: White Hot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_FULGURITE@{DIRP\_PSEUDO\_COLOR\_FULGURITE}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_FULGURITE@{DIRP\_PSEUDO\_COLOR\_FULGURITE}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a52bf3f2c177fdd59633a2e9d106e0c06}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a52bf3f2c177fdd59633a2e9d106e0c06}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+U\+L\+G\+U\+R\+I\+TE&1\+: Fulgurite \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_IRONRED@{DIRP\_PSEUDO\_COLOR\_IRONRED}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_IRONRED@{DIRP\_PSEUDO\_COLOR\_IRONRED}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322abd45673880be6c5c5f365d5ba2494899}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322abd45673880be6c5c5f365d5ba2494899}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+I\+R\+O\+N\+R\+ED&2\+: Iron Red \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_HOTIRON@{DIRP\_PSEUDO\_COLOR\_HOTIRON}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_HOTIRON@{DIRP\_PSEUDO\_COLOR\_HOTIRON}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a59d4f7abc294f3a89f21a4691ca44593}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a59d4f7abc294f3a89f21a4691ca44593}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+H\+O\+T\+I\+R\+ON&3\+: Hot Iron \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_MEDICAL@{DIRP\_PSEUDO\_COLOR\_MEDICAL}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_MEDICAL@{DIRP\_PSEUDO\_COLOR\_MEDICAL}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4febaa644f7f54c159af0aad7f10d7e8}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4febaa644f7f54c159af0aad7f10d7e8}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+E\+D\+I\+C\+AL&4\+: Medical \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_ARCTIC@{DIRP\_PSEUDO\_COLOR\_ARCTIC}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_ARCTIC@{DIRP\_PSEUDO\_COLOR\_ARCTIC}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4fcb315b16455a5ae3bd8f8f97caff49}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4fcb315b16455a5ae3bd8f8f97caff49}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+A\+R\+C\+T\+IC&5\+: Arctic \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_RAINBOW1@{DIRP\_PSEUDO\_COLOR\_RAINBOW1}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_RAINBOW1@{DIRP\_PSEUDO\_COLOR\_RAINBOW1}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a08abad07f98b8d5933f929d9e3ba0968}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a08abad07f98b8d5933f929d9e3ba0968}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+A\+I\+N\+B\+O\+W1&6\+: Rainbow 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_RAINBOW2@{DIRP\_PSEUDO\_COLOR\_RAINBOW2}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_RAINBOW2@{DIRP\_PSEUDO\_COLOR\_RAINBOW2}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a86f0e038abb3542bb86e46e1ed8d5362}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a86f0e038abb3542bb86e46e1ed8d5362}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+A\+I\+N\+B\+O\+W2&7\+: Rainbow 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_TINT@{DIRP\_PSEUDO\_COLOR\_TINT}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_TINT@{DIRP\_PSEUDO\_COLOR\_TINT}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a62b7ea2b67abc1761236ae19da30d808}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a62b7ea2b67abc1761236ae19da30d808}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+I\+NT&8\+: Tint \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_BLACKHOT@{DIRP\_PSEUDO\_COLOR\_BLACKHOT}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_BLACKHOT@{DIRP\_PSEUDO\_COLOR\_BLACKHOT}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4415e604bb0431b3049b84edf7cf8a6b}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322a4415e604bb0431b3049b84edf7cf8a6b}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K\+H\+OT&9\+: Black Hot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_PSEUDO\_COLOR\_NUM@{DIRP\_PSEUDO\_COLOR\_NUM}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_PSEUDO\_COLOR\_NUM@{DIRP\_PSEUDO\_COLOR\_NUM}}}\mbox{\Hypertarget{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322ae40e56d0b4a8cd10dfff389763f3b260}\label{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322ae40e56d0b4a8cd10dfff389763f3b260}} 
+D\+I\+R\+P\+\_\+\+P\+S\+E\+U\+D\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+UM&10\+: Total number \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_ret\_code\_e@{dirp\_ret\_code\_e}}
+\index{dirp\_ret\_code\_e@{dirp\_ret\_code\_e}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_ret\_code\_e}{dirp\_ret\_code\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}}}
+
+
+
+Error codes. 
+
+Most D\+I\+RP functions return 0 on success or one of negative value on failure. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_SUCCESS@{DIRP\_SUCCESS}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_SUCCESS@{DIRP\_SUCCESS}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa41840f86a9477c411acbbc7b68edb000}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa41840f86a9477c411acbbc7b68edb000}} 
+D\+I\+R\+P\+\_\+\+S\+U\+C\+C\+E\+SS&0\+: Success (no error) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_MALLOC@{DIRP\_ERROR\_MALLOC}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_MALLOC@{DIRP\_ERROR\_MALLOC}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa2527a400493ea374221a087d645b380f}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa2527a400493ea374221a087d645b380f}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+L\+L\+OC&-\/1\+: Malloc error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_POINTER\_NULL@{DIRP\_ERROR\_POINTER\_NULL}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_POINTER\_NULL@{DIRP\_ERROR\_POINTER\_NULL}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa9135d537cd0681209a5b083da885d5e0}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa9135d537cd0681209a5b083da885d5e0}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL&-\/2\+: N\+U\+LL pointer input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_PARAMS@{DIRP\_ERROR\_INVALID\_PARAMS}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_PARAMS@{DIRP\_ERROR\_INVALID\_PARAMS}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaff51075301e337ec3223a47e8647572f}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaff51075301e337ec3223a47e8647572f}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+MS&-\/3\+: Invalid parameters input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_RAW@{DIRP\_ERROR\_INVALID\_RAW}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_RAW@{DIRP\_ERROR\_INVALID\_RAW}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aae83eda91339b61292f0289ad2786aa40}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aae83eda91339b61292f0289ad2786aa40}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+AW&-\/4\+: Invalid R\+AW in R-\/\+J\+P\+EG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_HEADER@{DIRP\_ERROR\_INVALID\_HEADER}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_HEADER@{DIRP\_ERROR\_INVALID\_HEADER}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaafa04914a458bf8bc2fc612d0f8ec3e0}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaafa04914a458bf8bc2fc612d0f8ec3e0}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+E\+A\+D\+ER&-\/5\+: Invalid header in R-\/\+J\+P\+EG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_CURVE@{DIRP\_ERROR\_INVALID\_CURVE}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_CURVE@{DIRP\_ERROR\_INVALID\_CURVE}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa0392a496b731fc6574c65cc2b2d9cf8b}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa0392a496b731fc6574c65cc2b2d9cf8b}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+U\+R\+VE&-\/6\+: Invalid curve L\+UT in R-\/\+J\+P\+EG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_RJPEG\_PARSE@{DIRP\_ERROR\_RJPEG\_PARSE}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_RJPEG\_PARSE@{DIRP\_ERROR\_RJPEG\_PARSE}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaa7ce2eaea439431890d261279f1f7e89}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaa7ce2eaea439431890d261279f1f7e89}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+J\+P\+E\+G\+\_\+\+P\+A\+R\+SE&-\/7\+: Parse error for R-\/\+J\+P\+EG data \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_SIZE@{DIRP\_ERROR\_SIZE}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_SIZE@{DIRP\_ERROR\_SIZE}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa81313464776ddaf37bcbcf4d3e92c440}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa81313464776ddaf37bcbcf4d3e92c440}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+I\+ZE&-\/8\+: Wrong size input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_HANDLE@{DIRP\_ERROR\_INVALID\_HANDLE}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_HANDLE@{DIRP\_ERROR\_INVALID\_HANDLE}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa6a72bc360cb20b688376e8d858d7bca3}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa6a72bc360cb20b688376e8d858d7bca3}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+LE&-\/9\+: Invalid handle input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_FORMAT\_INPUT@{DIRP\_ERROR\_FORMAT\_INPUT}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_FORMAT\_INPUT@{DIRP\_ERROR\_FORMAT\_INPUT}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaba152d8d79e164b65368864d10073882}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aaba152d8d79e164b65368864d10073882}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+P\+UT&-\/10\+: Wrong input image format \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_FORMAT\_OUTPUT@{DIRP\_ERROR\_FORMAT\_OUTPUT}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_FORMAT\_OUTPUT@{DIRP\_ERROR\_FORMAT\_OUTPUT}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa266c5832900988bf7516de1c4fc39087}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa266c5832900988bf7516de1c4fc39087}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+O\+U\+T\+P\+UT&-\/11\+: Wrong output image format \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_UNSUPPORTED\_FUNC@{DIRP\_ERROR\_UNSUPPORTED\_FUNC}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_UNSUPPORTED\_FUNC@{DIRP\_ERROR\_UNSUPPORTED\_FUNC}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aad3807e5f7d316ea427e40f6d4f25906d}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aad3807e5f7d316ea427e40f6d4f25906d}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+F\+U\+NC&-\/12\+: Unsupported function called \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_NOT\_READY@{DIRP\_ERROR\_NOT\_READY}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_NOT\_READY@{DIRP\_ERROR\_NOT\_READY}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aae2c0bba9220d120049c310c547610e98}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aae2c0bba9220d120049c310c547610e98}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY&-\/13\+: Some preliminary conditions not meet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_ACTIVATION@{DIRP\_ERROR\_ACTIVATION}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_ACTIVATION@{DIRP\_ERROR\_ACTIVATION}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aada8b5f7fda6681c04e182005aeca9725}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aada8b5f7fda6681c04e182005aeca9725}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+ON&-\/14\+: S\+DK activate failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_INI@{DIRP\_ERROR\_INVALID\_INI}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_INI@{DIRP\_ERROR\_INVALID\_INI}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa7219925ac11e9ee5011a8fd16f9e6358}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa7219925ac11e9ee5011a8fd16f9e6358}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+NI&-\/15\+: Invalid ini file \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_INVALID\_SUB\_DLL@{DIRP\_ERROR\_INVALID\_SUB\_DLL}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_INVALID\_SUB\_DLL@{DIRP\_ERROR\_INVALID\_SUB\_DLL}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa6590a3baefcf71375e51f77c6197c2e0}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aa6590a3baefcf71375e51f77c6197c2e0}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+U\+B\+\_\+\+D\+LL&-\/16\+: Invalid sub D\+LL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_ERROR\_ADVANCED@{DIRP\_ERROR\_ADVANCED}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_ERROR\_ADVANCED@{DIRP\_ERROR\_ADVANCED}}}\mbox{\Hypertarget{dirp__api_8h_ae20843d099b85fc469be0483f524c14aab708ec08feba1e1d0b7f7eb52e1ca902}\label{dirp__api_8h_ae20843d099b85fc469be0483f524c14aab708ec08feba1e1d0b7f7eb52e1ca902}} 
+D\+I\+R\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+A\+N\+C\+ED&-\/32\+: Advanced error codes which may be smaller than this value \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}\label{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_verbose\_level\_e@{dirp\_verbose\_level\_e}}
+\index{dirp\_verbose\_level\_e@{dirp\_verbose\_level\_e}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_verbose\_level\_e}{dirp\_verbose\_level\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}{dirp\+\_\+verbose\+\_\+level\+\_\+e}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_VERBOSE\_LEVEL\_NONE@{DIRP\_VERBOSE\_LEVEL\_NONE}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_VERBOSE\_LEVEL\_NONE@{DIRP\_VERBOSE\_LEVEL\_NONE}}}\mbox{\Hypertarget{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a1b96f4563b79a5d32688679683404216}\label{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a1b96f4563b79a5d32688679683404216}} 
+D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+O\+NE&0\+: Print none \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_VERBOSE\_LEVEL\_DEBUG@{DIRP\_VERBOSE\_LEVEL\_DEBUG}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_VERBOSE\_LEVEL\_DEBUG@{DIRP\_VERBOSE\_LEVEL\_DEBUG}}}\mbox{\Hypertarget{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a61bbacd4be44ab03f1df241fb6b8719e}\label{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a61bbacd4be44ab03f1df241fb6b8719e}} 
+D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+B\+UG&1\+: Print debug log \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_VERBOSE\_LEVEL\_DETAIL@{DIRP\_VERBOSE\_LEVEL\_DETAIL}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_VERBOSE\_LEVEL\_DETAIL@{DIRP\_VERBOSE\_LEVEL\_DETAIL}}}\mbox{\Hypertarget{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5af42369247b48dfbc7d2f0c0b6e049cba}\label{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5af42369247b48dfbc7d2f0c0b6e049cba}} 
+D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+T\+A\+IL&2\+: Print all log \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIRP\_VERBOSE\_LEVEL\_NUM@{DIRP\_VERBOSE\_LEVEL\_NUM}!dirp\_api.h@{dirp\_api.h}}\index{dirp\_api.h@{dirp\_api.h}!DIRP\_VERBOSE\_LEVEL\_NUM@{DIRP\_VERBOSE\_LEVEL\_NUM}}}\mbox{\Hypertarget{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a2b0674069827dee8da8bab9aed554bfa}\label{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5a2b0674069827dee8da8bab9aed554bfa}} 
+D\+I\+R\+P\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+UM&3\+: Total number \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dirp__api_8h_a5b34c77977d46500c86277c9ea5580e2}\label{dirp__api_8h_a5b34c77977d46500c86277c9ea5580e2}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_create\_from\_rjpeg@{dirp\_create\_from\_rjpeg}}
+\index{dirp\_create\_from\_rjpeg@{dirp\_create\_from\_rjpeg}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_create\_from\_rjpeg()}{dirp\_create\_from\_rjpeg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+create\+\_\+from\+\_\+rjpeg (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{int32\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}} $\ast$}]{ph }\end{DoxyParamCaption})}
+
+
+
+Create a new D\+I\+RP handle with specified R-\/\+J\+P\+EG binary data. 
+
+The R-\/\+J\+P\+EG binary data buffer must remain valid until the handle is destroyed. The D\+I\+RP A\+PI library will create some alloc buffers for inner usage. So the application should reserve enough stack size for the library.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & R-\/\+J\+P\+EG binary data buffer pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & R-\/\+J\+P\+EG binary data buffer size in bytes \\
+\hline
+\mbox{\texttt{ out}}  & {\em ph} & D\+I\+RP A\+PI handle pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a167cf7e92092b816cad74c1d95b2e304}\label{dirp__api_8h_a167cf7e92092b816cad74c1d95b2e304}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_destroy@{dirp\_destroy}}
+\index{dirp\_destroy@{dirp\_destroy}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_destroy()}{dirp\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h }\end{DoxyParamCaption})}
+
+
+
+Destroy the D\+I\+RP handle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_adf77f6db20b236d5e5887810f295f174}\label{dirp__api_8h_adf77f6db20b236d5e5887810f295f174}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_api\_version@{dirp\_get\_api\_version}}
+\index{dirp\_get\_api\_version@{dirp\_get\_api\_version}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_api\_version()}{dirp\_get\_api\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+api\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdirp__api__version__t}{dirp\+\_\+api\+\_\+version\+\_\+t}} $\ast$}]{version }\end{DoxyParamCaption})}
+
+
+
+Get A\+PI version. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em version} & D\+I\+RP A\+PI version information pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a87526fe677db8b852ee86f34ee11d861}\label{dirp__api_8h_a87526fe677db8b852ee86f34ee11d861}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_color\_bar@{dirp\_get\_color\_bar}}
+\index{dirp\_get\_color\_bar@{dirp\_get\_color\_bar}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_color\_bar()}{dirp\_get\_color\_bar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+color\+\_\+bar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} $\ast$}]{color\+\_\+bar }\end{DoxyParamCaption})}
+
+
+
+Get orignial/custom I\+SP color bar parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em color\+\_\+bar} & I\+SP color bar parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a10dcf36caab3af8ac9fc5cfce7fd42cb}\label{dirp__api_8h_a10dcf36caab3af8ac9fc5cfce7fd42cb}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_color\_bar\_adaptive\_params@{dirp\_get\_color\_bar\_adaptive\_params}}
+\index{dirp\_get\_color\_bar\_adaptive\_params@{dirp\_get\_color\_bar\_adaptive\_params}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_color\_bar\_adaptive\_params()}{dirp\_get\_color\_bar\_adaptive\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+color\+\_\+bar\+\_\+adaptive\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} $\ast$}]{color\+\_\+bar }\end{DoxyParamCaption})}
+
+
+
+Get adaptive I\+SP color bar parameters in automatic mode. 
+
+In color bar automatic mode \+: manual\+\_\+enable in \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} is set as false. The inner I\+SP algorithm will calculate the best range values for color bar. Before calling this A\+PI you should call \mbox{\hyperlink{dirp__api_8h_a5df7901ff313e239f11d7e51a123ffd0}{dirp\+\_\+process}} once at least. And if any processing or measurement parameters had been changed, you should also call \mbox{\hyperlink{dirp__api_8h_a5df7901ff313e239f11d7e51a123ffd0}{dirp\+\_\+process}} again for getting new color bar adaptive parameters. In the above calling \mbox{\hyperlink{dirp__api_8h_a5df7901ff313e239f11d7e51a123ffd0}{dirp\+\_\+process}}, manual\+\_\+enable in \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} must be set as {\bfseries{false}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em color\+\_\+bar} & I\+SP color bar parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a877486e77a5c6ff2caa75a7cb5cff28e}\label{dirp__api_8h_a877486e77a5c6ff2caa75a7cb5cff28e}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_enhancement\_params@{dirp\_get\_enhancement\_params}}
+\index{dirp\_get\_enhancement\_params@{dirp\_get\_enhancement\_params}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_enhancement\_params()}{dirp\_get\_enhancement\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+enhancement\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__enhancement__params__t}{dirp\+\_\+enhancement\+\_\+params\+\_\+t}} $\ast$}]{enhancement\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Get orignial/custom I\+SP enhancement parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em enhancement\+\_\+params} & I\+SP enhancement parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a1194bbb29f474c5650d5d265147d046b}\label{dirp__api_8h_a1194bbb29f474c5650d5d265147d046b}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_isotherm@{dirp\_get\_isotherm}}
+\index{dirp\_get\_isotherm@{dirp\_get\_isotherm}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_isotherm()}{dirp\_get\_isotherm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+isotherm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__isotherm__t}{dirp\+\_\+isotherm\+\_\+t}} $\ast$}]{isotherm }\end{DoxyParamCaption})}
+
+
+
+Get orignial/custom I\+SP isotherm parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em isotherm} & I\+SP isotherm parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_ad31b0b70de3fda2c57d42d323a3cb225}\label{dirp__api_8h_ad31b0b70de3fda2c57d42d323a3cb225}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_measurement\_params@{dirp\_get\_measurement\_params}}
+\index{dirp\_get\_measurement\_params@{dirp\_get\_measurement\_params}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_measurement\_params()}{dirp\_get\_measurement\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+measurement\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__measurement__params__t}{dirp\+\_\+measurement\+\_\+params\+\_\+t}} $\ast$}]{measurement\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Get orignial/custom temperature measurement parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em measurement\+\_\+params} & Temperature measurement parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a62262b2b68e06d8e71e28df30508734b}\label{dirp__api_8h_a62262b2b68e06d8e71e28df30508734b}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_measurement\_params\_range@{dirp\_get\_measurement\_params\_range}}
+\index{dirp\_get\_measurement\_params\_range@{dirp\_get\_measurement\_params\_range}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_measurement\_params\_range()}{dirp\_get\_measurement\_params\_range()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+measurement\+\_\+params\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__measurement__params__range__t}{dirp\+\_\+measurement\+\_\+params\+\_\+range\+\_\+t}} $\ast$}]{params\+\_\+range }\end{DoxyParamCaption})}
+
+
+
+Get range of temperature measurement parameters that user can set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em params\+\_\+range} & Temperature measurement parameters range pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a93c10dbad6a0b3aae23e0269b7fa380f}\label{dirp__api_8h_a93c10dbad6a0b3aae23e0269b7fa380f}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_original\_raw@{dirp\_get\_original\_raw}}
+\index{dirp\_get\_original\_raw@{dirp\_get\_original\_raw}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_original\_raw()}{dirp\_get\_original\_raw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+original\+\_\+raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{uint16\+\_\+t $\ast$}]{raw\+\_\+image,  }\item[{int32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Get original R\+AW binary data from R-\/\+J\+P\+EG. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em raw\+\_\+image} & Original R\+AW image data buffer pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Original R\+AW image data buffer size in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_adb868414d4e7df904b59834688409834}\label{dirp__api_8h_adb868414d4e7df904b59834688409834}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_pseudo\_color@{dirp\_get\_pseudo\_color}}
+\index{dirp\_get\_pseudo\_color@{dirp\_get\_pseudo\_color}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_pseudo\_color()}{dirp\_get\_pseudo\_color()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+pseudo\+\_\+color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}} $\ast$}]{pseudo\+\_\+color }\end{DoxyParamCaption})}
+
+
+
+Get orignial/custom I\+SP pseudo color type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em pseudo\+\_\+color} & I\+SP pseudo color type pointer \mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a4d627fe7a4df99bcf85124f3f72a0179}\label{dirp__api_8h_a4d627fe7a4df99bcf85124f3f72a0179}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_pseudo\_color\_lut@{dirp\_get\_pseudo\_color\_lut}}
+\index{dirp\_get\_pseudo\_color\_lut@{dirp\_get\_pseudo\_color\_lut}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_pseudo\_color\_lut()}{dirp\_get\_pseudo\_color\_lut()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+pseudo\+\_\+color\+\_\+lut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__isp__pseudo__color__lut__t}{dirp\+\_\+isp\+\_\+pseudo\+\_\+color\+\_\+lut\+\_\+t}} $\ast$}]{pseudo\+\_\+lut }\end{DoxyParamCaption})}
+
+
+
+Get I\+SP pseudo color L\+UT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em pseudo\+\_\+lut} & I\+SP pseudo color L\+UT pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a39f7ee19b18a361f41271a6e1aa678ad}\label{dirp__api_8h_a39f7ee19b18a361f41271a6e1aa678ad}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_rjpeg\_resolution@{dirp\_get\_rjpeg\_resolution}}
+\index{dirp\_get\_rjpeg\_resolution@{dirp\_get\_rjpeg\_resolution}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_rjpeg\_resolution()}{dirp\_get\_rjpeg\_resolution()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+rjpeg\+\_\+resolution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__resolution__t}{dirp\+\_\+resolution\+\_\+t}} $\ast$}]{resolution }\end{DoxyParamCaption})}
+
+
+
+Get R-\/\+J\+P\+EG image resolution information. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em rjpeg\+\_\+info} & R-\/\+J\+P\+EG basic information pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a39953da000361200c789b7b782251c94}\label{dirp__api_8h_a39953da000361200c789b7b782251c94}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_get\_rjpeg\_version@{dirp\_get\_rjpeg\_version}}
+\index{dirp\_get\_rjpeg\_version@{dirp\_get\_rjpeg\_version}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_get\_rjpeg\_version()}{dirp\_get\_rjpeg\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+get\+\_\+rjpeg\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{structdirp__rjpeg__version__t}{dirp\+\_\+rjpeg\+\_\+version\+\_\+t}} $\ast$}]{version }\end{DoxyParamCaption})}
+
+
+
+Get R-\/\+J\+P\+EG version. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em version} & R-\/\+J\+P\+EG version information pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_ac0bd3bcac73d4856ba8ccd4c5edd9ece}\label{dirp__api_8h_ac0bd3bcac73d4856ba8ccd4c5edd9ece}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_measure@{dirp\_measure}}
+\index{dirp\_measure@{dirp\_measure}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_measure()}{dirp\_measure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+measure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{int16\+\_\+t $\ast$}]{temp\+\_\+image,  }\item[{int32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Measure temperature of whole thermal image with R\+AW data in R-\/\+J\+P\+EG. 
+
+Each I\+N\+T16 pixel value represents ten times the temperature value in Celsius. In other words, each L\+SB represents 0.\+1 degrees Celsius. The custom measurement parameters can be modifed by this A\+PI\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{dirp__api_8h_a919d42cac93299023dfcf8e63e15ce52}{dirp\+\_\+set\+\_\+measurement\+\_\+params}}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em temp\+\_\+image} & Temperature image data buffer pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Temperature image data buffer size in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a39492e01c35153c587bcfbf1b49d7364}\label{dirp__api_8h_a39492e01c35153c587bcfbf1b49d7364}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_measure\_ex@{dirp\_measure\_ex}}
+\index{dirp\_measure\_ex@{dirp\_measure\_ex}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_measure\_ex()}{dirp\_measure\_ex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+measure\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{float $\ast$}]{temp\+\_\+image,  }\item[{int32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Measure temperature of whole thermal image with R\+AW data in R-\/\+J\+P\+EG. 
+
+Each F\+L\+O\+A\+T32 pixel value represents the real temperature in Celsius. The custom measurement parameters can be modifed by this A\+PI\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{dirp__api_8h_a919d42cac93299023dfcf8e63e15ce52}{dirp\+\_\+set\+\_\+measurement\+\_\+params}}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em temp\+\_\+image} & Temperature image data buffer pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Temperature image data buffer size in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a5df7901ff313e239f11d7e51a123ffd0}\label{dirp__api_8h_a5df7901ff313e239f11d7e51a123ffd0}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_process@{dirp\_process}}
+\index{dirp\_process@{dirp\_process}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_process()}{dirp\_process()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{uint8\+\_\+t $\ast$}]{color\+\_\+image,  }\item[{int32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Run I\+SP algorithm with R\+AW data in R-\/\+J\+P\+EG and output R\+GB pseudo color image. 
+
+The I\+SP configurable parameters can be modifed by these A\+P\+Is\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{dirp__api_8h_ad3e247ff81a3732c64f194bf2fe7338b}{dirp\+\_\+set\+\_\+enhancement\+\_\+params}}
+\item \mbox{\hyperlink{dirp__api_8h_a029b25e80c8ee9342637f7c5a96cce86}{dirp\+\_\+set\+\_\+isotherm}}
+\item \mbox{\hyperlink{dirp__api_8h_af15b7fd6252b7bd81c712086cf50b870}{dirp\+\_\+set\+\_\+color\+\_\+bar}}
+\item \mbox{\hyperlink{dirp__api_8h_a2eac2f12e5c766e5c12f34e9bec17a81}{dirp\+\_\+set\+\_\+pseudo\+\_\+color}}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em color\+\_\+image} & Color image data buffer pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Color image data buffer size in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_ac7f8b509432110184af98f3cb09da9ce}\label{dirp__api_8h_ac7f8b509432110184af98f3cb09da9ce}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_process\_strech@{dirp\_process\_strech}}
+\index{dirp\_process\_strech@{dirp\_process\_strech}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_process\_strech()}{dirp\_process\_strech()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+process\+\_\+strech (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{float $\ast$}]{strech\+\_\+image,  }\item[{int32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Run I\+SP strech algorithm with R\+AW data in R-\/\+J\+P\+EG and output F\+L\+O\+A\+T32 streching image. 
+
+The I\+SP strech configurable parameters can be modifed by these A\+P\+Is\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{dirp__api_8h_ad3e247ff81a3732c64f194bf2fe7338b}{dirp\+\_\+set\+\_\+enhancement\+\_\+params}}
+\item \mbox{\hyperlink{dirp__api_8h_a029b25e80c8ee9342637f7c5a96cce86}{dirp\+\_\+set\+\_\+isotherm}}
+\item \mbox{\hyperlink{dirp__api_8h_af15b7fd6252b7bd81c712086cf50b870}{dirp\+\_\+set\+\_\+color\+\_\+bar}}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em strech\+\_\+image} & Strech image data buffer pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Strech image data buffer size in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_af15b7fd6252b7bd81c712086cf50b870}\label{dirp__api_8h_af15b7fd6252b7bd81c712086cf50b870}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_color\_bar@{dirp\_set\_color\_bar}}
+\index{dirp\_set\_color\_bar@{dirp\_set\_color\_bar}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_color\_bar()}{dirp\_set\_color\_bar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+set\+\_\+color\+\_\+bar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{const \mbox{\hyperlink{structdirp__color__bar__t}{dirp\+\_\+color\+\_\+bar\+\_\+t}} $\ast$}]{color\+\_\+bar }\end{DoxyParamCaption})}
+
+
+
+Set custom I\+SP color bar parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em color\+\_\+bar} & I\+SP color bar parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_ad3e247ff81a3732c64f194bf2fe7338b}\label{dirp__api_8h_ad3e247ff81a3732c64f194bf2fe7338b}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_enhancement\_params@{dirp\_set\_enhancement\_params}}
+\index{dirp\_set\_enhancement\_params@{dirp\_set\_enhancement\_params}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_enhancement\_params()}{dirp\_set\_enhancement\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+set\+\_\+enhancement\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{const \mbox{\hyperlink{structdirp__enhancement__params__t}{dirp\+\_\+enhancement\+\_\+params\+\_\+t}} $\ast$}]{enhancement\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Set custom I\+SP enhancement parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em enhancement\+\_\+params} & I\+SP enhancement parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a029b25e80c8ee9342637f7c5a96cce86}\label{dirp__api_8h_a029b25e80c8ee9342637f7c5a96cce86}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_isotherm@{dirp\_set\_isotherm}}
+\index{dirp\_set\_isotherm@{dirp\_set\_isotherm}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_isotherm()}{dirp\_set\_isotherm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+set\+\_\+isotherm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{const \mbox{\hyperlink{structdirp__isotherm__t}{dirp\+\_\+isotherm\+\_\+t}} $\ast$}]{isotherm }\end{DoxyParamCaption})}
+
+
+
+Set custom I\+SP isotherm parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em isotherm} & I\+SP isotherm parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a41d6e2253ea7649069a0d0dc96e530b8}\label{dirp__api_8h_a41d6e2253ea7649069a0d0dc96e530b8}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_logger\_file@{dirp\_set\_logger\_file}}
+\index{dirp\_set\_logger\_file@{dirp\_set\_logger\_file}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_logger\_file()}{dirp\_set\_logger\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} void dirp\+\_\+set\+\_\+logger\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Set external logger file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & File name which save log information. Set it as nullptr if you want print log on console. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dirp__api_8h_a919d42cac93299023dfcf8e63e15ce52}\label{dirp__api_8h_a919d42cac93299023dfcf8e63e15ce52}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_measurement\_params@{dirp\_set\_measurement\_params}}
+\index{dirp\_set\_measurement\_params@{dirp\_set\_measurement\_params}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_measurement\_params()}{dirp\_set\_measurement\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+set\+\_\+measurement\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{const \mbox{\hyperlink{structdirp__measurement__params__t}{dirp\+\_\+measurement\+\_\+params\+\_\+t}} $\ast$}]{measurement\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Set custom temperature measurement parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em measurement\+\_\+params} & Temperature measurement parameters pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a2eac2f12e5c766e5c12f34e9bec17a81}\label{dirp__api_8h_a2eac2f12e5c766e5c12f34e9bec17a81}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_pseudo\_color@{dirp\_set\_pseudo\_color}}
+\index{dirp\_set\_pseudo\_color@{dirp\_set\_pseudo\_color}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_pseudo\_color()}{dirp\_set\_pseudo\_color()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} int32\+\_\+t dirp\+\_\+set\+\_\+pseudo\+\_\+color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_afbb5c92b91edcf8ec72e83e253d1d247}{D\+I\+R\+P\+\_\+\+H\+A\+N\+D\+LE}}}]{h,  }\item[{\mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}}}]{pseudo\+\_\+color }\end{DoxyParamCaption})}
+
+
+
+Set custom I\+SP pseudo color type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & D\+I\+RP A\+PI handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em pseudo\+\_\+color} & I\+SP pseudo color type \mbox{\hyperlink{dirp__api_8h_af7f6158d43f3d55e4d89eedc8c665322}{dirp\+\_\+pseudo\+\_\+color\+\_\+e}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int return code \mbox{\hyperlink{dirp__api_8h_ae20843d099b85fc469be0483f524c14a}{dirp\+\_\+ret\+\_\+code\+\_\+e}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dirp__api_8h_a21baa00d0336467d6fce62ae0d583194}\label{dirp__api_8h_a21baa00d0336467d6fce62ae0d583194}} 
+\index{dirp\_api.h@{dirp\_api.h}!dirp\_set\_verbose\_level@{dirp\_set\_verbose\_level}}
+\index{dirp\_set\_verbose\_level@{dirp\_set\_verbose\_level}!dirp\_api.h@{dirp\_api.h}}
+\doxysubsubsection{\texorpdfstring{dirp\_set\_verbose\_level()}{dirp\_set\_verbose\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dirp__api_8h_af241d00f78195ece6ef34d97bb5c48f3}{dllexport}} void dirp\+\_\+set\+\_\+verbose\+\_\+level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}{dirp\+\_\+verbose\+\_\+level\+\_\+e}}}]{level }\end{DoxyParamCaption})}
+
+
+
+Set log print level. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & Log pring level \mbox{\hyperlink{dirp__api_8h_a95e6a138a16a6e5f2e16706116332fa5}{dirp\+\_\+verbose\+\_\+level\+\_\+e}} \\
+\hline
+\end{DoxyParams}
