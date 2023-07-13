@@ -18,7 +18,7 @@ pillow==9.1.1
 ```python
     # 输入和输出目录
     input_dir = "input_dir"
-    temp_dtr = "temp_dir"
+    temp_dir = "temp_dir"
     output_dir = 'out_dir'
 ```
 `input_dir`为拍摄的红外相片的文件夹
