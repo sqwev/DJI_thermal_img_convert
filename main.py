@@ -1,12 +1,14 @@
-import subprocess
+# encoding: utf-8
+# @author: Shenzhou Liu
+# @email: 913737515@qq.com
+
 import os
-import numpy as np
+import shutil
+import subprocess
 import piexif
+import numpy as np
 from tqdm import tqdm
 from PIL import Image
-import shutil
-from PIL import Image
-
 
 def mkdir(path):
     '''
@@ -27,7 +29,7 @@ def mkdir(path):
 
 
 def jpg2tiff(inputpath, outpath):
-    command = "dji_thermal_sdk_v1.3_20220517/utility/bin/windows/release_x64/dji_irp.exe -s " + \
+    command = "dji_thermal_sdk_v1.4_20220929/utility/bin/windows/release_x64/dji_irp.exe -s " + \
               inputpath + " -a measure -o " + outpath
     args = [r"C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe", command]
     ps = subprocess.Popen(args, stdout=subprocess.PIPE)
@@ -54,6 +56,7 @@ characters such as spaces or tabs, otherwise an error will be reported")
 
     print(f"Program detect {len(input_file_path_list)} raw files in {input_dir}.")
 
+    print(f"Start to convert..")
     for input_file_path in tqdm(input_file_path_list):
         img_name = os.path.basename(input_file_path)
         raw_file_path = os.path.join(temp_dir, img_name.split(".")[0]+".raw")
@@ -90,6 +93,6 @@ characters such as spaces or tabs, otherwise an error will be reported")
 if __name__ == "__main__":
     current_dir = os.getcwd()
     os.chdir(current_dir)
-    input_dir = "DJI_20230713080243_0098_T"
+    input_dir = "input_dir"
     output_dir = 'out_dir'
     run(input_dir, output_dir)

@@ -23,7 +23,7 @@ pillow==9.1.1
 ```
 `input_dir`为拍摄的红外相片的文件夹
 
-`temp_dtr`为存储数据用的临时文件夹 
+`temp_dir`为存储数据用的临时文件夹 
 
 `output_dir`为保存tiff图像结果的文件夹 
 
