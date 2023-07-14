@@ -1,4 +1,11 @@
-# DJI M30T 与 御2行业进阶版的热红外jpg转tiff脚本使用方法
+# DJI 热红外jpg转tiff脚本使用方法
+可能支持的型号有：
+- 禅思 H20N
+- 禅思 Zenmuse XT S
+- 禅思 Zenmuse H20 系列
+- 经纬 M30 系列
+- 御 2 行业进阶版
+- DJI Mavic 3 行业系列
 
 
 ## 使用环境
