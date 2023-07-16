@@ -34,8 +34,18 @@ pillow==9.1.1
 
 `output_dir`为保存tiff图像结果的文件夹 
 
+## 参数设置
+
+其中参数的意义是：
+`distance`：拍摄距离
+`humidity`：空气湿度
+`emissivity`：发射率
+`reflection`：反射温度
 先将要合成的图像复制进`input_dir`文件夹，然后运行`main.py`即可。
 
+```python
+run(input_dir, output_dir, distance=10, humidity=70,emissivity=0.95,reflection=40)
+```
 
 
 # 使用效果
