@@ -124,11 +124,11 @@ def print_help():
 def run(input_dir, output_dir, **kwargs):
     print_help()
 
-    
     temp_dir = "temp_dir"
     mkdir(temp_dir)
     mkdir(output_dir)
 
+    # ----------------- get input file path list -----------------
     input_file_path_list = []
     for root, dirs, files in os.walk(input_dir):
         for file in files:
@@ -136,7 +136,9 @@ def run(input_dir, output_dir, **kwargs):
                 input_file_path_list.append(os.path.join(root, file))
 
     print(f"Program detect {len(input_file_path_list)} raw files in {input_dir}.")
-
+    if len(input_file_path_list) == 0:
+        raise ValueError(f"Program detect 0 raw files in {input_dir}.")
+    # ----------------- convert jpg to tiff -----------------
     print(f"Start to convert..")
     for input_file_path in tqdm(input_file_path_list):
         img_name = os.path.basename(input_file_path)
