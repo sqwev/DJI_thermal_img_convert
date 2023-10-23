@@ -1,38 +1,42 @@
 # DJI 热红外jpg转tiff脚本使用方法
+
 可能支持的型号有：
+
 - 禅思 H20N
 - 禅思 Zenmuse XT S
 - 禅思 Zenmuse H20 系列
-- 经纬 M30 系列
+- 经纬 M30 系列（M30T经过测试，会出现问题。M30T拍摄的图像经过sdk转换后，输出tiff的分辨率是640*512，与原来的png分辨率不匹配，需要手动在 `main.py`中的 168行的 `img = img.reshape(cols, rows)`）中的cols和rows改为640和512才能正常运行
 - 御 2 行业进阶版
 - DJI Mavic 3 行业系列
 
-
 ## 使用环境
+
 测试环境为Windows10 64位
 
 ## 依赖包
 
 python==3.7
 
-numpy==1.17.0  
+numpy==1.17.0
 
-piexif==1.1.3   
+piexif==1.1.3
 
-pillow==9.1.1  
+pillow==9.1.1
 
 ## 使用方法
+
 ```python
     # 输入和输出目录
     input_dir = "input_dir"
     temp_dir = "temp_dir"
     output_dir = 'out_dir'
 ```
+
 `input_dir`为拍摄的红外相片的文件夹
 
-`temp_dir`为存储数据用的临时文件夹 
+`temp_dir`为存储数据用的临时文件夹
 
-`output_dir`为保存tiff图像结果的文件夹 
+`output_dir`为保存tiff图像结果的文件夹
 
 ## 参数设置
 
@@ -41,12 +45,11 @@ pillow==9.1.1
 `humidity`：空气湿度
 `emissivity`：发射率
 `reflection`：反射温度
-先将要合成的图像复制进`input_dir`文件夹，然后运行`main.py`即可。
+先将要合成的图像复制进 `input_dir`文件夹，然后运行 `main.py`即可。
 
 ```python
 run(input_dir, output_dir, distance=10, humidity=70,emissivity=0.95,reflection=40)
 ```
-
 
 # 使用效果
 
