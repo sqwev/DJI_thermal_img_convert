@@ -162,10 +162,10 @@ def run(input_dir, output_dir, **kwargs):
         # get rows and cols in jpg file
         image = Image.open(input_file_path)
         width, height = image.size
-        rows, cols = width, height
+        cols, rows = width, height
         img = np.fromfile(raw_file_path, dtype='int16')
         img = img / 10 # raw存储的温度值是实际的10倍
-        img = img.reshape(cols, rows)
+        img = img.reshape(rows, cols)
         im = Image.fromarray(img)
         exif_dict = piexif.load(input_file_path)
         new_exif = {

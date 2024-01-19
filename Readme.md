@@ -5,7 +5,7 @@
 - 禅思 H20N
 - 禅思 Zenmuse XT S
 - 禅思 Zenmuse H20 系列
-- 经纬 M30 系列（M30T经过测试，会出现问题。M30T拍摄的图像经过sdk转换后，输出tiff的分辨率是640*512，与原来的png分辨率不匹配，需要手动在 `main.py`中的 168行的 `img = img.reshape(cols, rows)`）中的cols和rows改为640和512才能正常运行
+- 经纬 M30 系列（M30T经过测试，会出现问题。M30T拍摄的图像经过sdk转换后，输出tiff的分辨率是640*512，与原来的png分辨率不匹配，需要手动在 `main.py`中的 168行的 ` img.reshape(rows, cols)`中的cols和rows改为640和512才能正常运行
 - 御 2 行业进阶版
 - DJI Mavic 3 行业系列
 
